@@ -1,0 +1,10 @@
+{
+  "name": "aurum-luxe-interiors",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve .",
+    "build": "echo Static site ready"
+  }
+}
