@@ -15,6 +15,6 @@ A static landing page for Aurum Luxe Interiors, ready to deploy on Vercel.
 2. In Vercel, choose **Add New Project**.
 3. Import the repository.
 4. Keep the framework preset as **Other**.
-5. Leave the build command empty, or use `npm run build`.
-6. Set the output directory to `.` if Vercel asks.
+5. Use `npm run build` as the build command.
+6. Set the output directory to `public` if Vercel asks.
 7. Deploy.
