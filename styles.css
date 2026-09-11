@@ -89,3 +89,30 @@
 }
 
 @media(prefers-reduced-motion:reduce){.skip-link{transition:none}}
+
+/* Pan-India positioning */
+:root{--ivory:#f3eee4;--paper:#fbf8f1;--ink:#181818;--brown:#1a1918;--espresso:#0e0e0e;--gold:#b28a51;--taupe:#b6a690;--line:rgba(28,24,21,.18)}
+.brand-mark{border-color:var(--gold);color:#d4ae73}
+.hero-summary{max-width:580px;margin:-18px 0 34px;color:rgba(255,255,255,.72);font-size:13px;line-height:1.65}
+.signature-line{margin-top:28px!important;color:#8a6848!important;font:400 19px/1.4 var(--serif)!important;letter-spacing:.02em}
+.undertake{background:var(--ivory)}
+.undertake-groups{border-top:1px solid var(--line)}
+.undertake-groups article{display:grid;grid-template-columns:minmax(150px,.55fr) 1fr;gap:28px;padding:24px 0;border-bottom:1px solid var(--line)}
+.undertake-groups h3{margin:0;font:400 clamp(20px,2vw,30px)/1.15 var(--serif)}
+.undertake-groups p{margin:2px 0 0;color:#6b6056;font-size:12px;line-height:1.65}
+.footprint-quote blockquote small{display:block;margin-top:16px;font:400 10px/1.5 var(--sans);letter-spacing:.13em;text-transform:uppercase;color:#77695e}
+.closing-statement{padding:150px 8vw;background:var(--espresso);color:var(--ivory)}
+.closing-statement h2{max-width:1050px;margin:0;font:400 clamp(62px,8vw,128px)/.92 var(--serif);letter-spacing:-.025em}
+.closing-statement h2 em{color:#d4ae73}
+.closing-copy{max-width:650px;margin:52px 0 0;font:400 clamp(18px,1.6vw,25px)/1.55 var(--serif);color:#c9c0b7}
+.closing-signature{margin:42px 0 0;color:#d4ae73;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+
+@media(max-width:900px){
+  .undertake-groups article{grid-template-columns:1fr;gap:7px}
+  .closing-statement{padding:100px 24px}
+}
+
+@media(max-width:520px){
+  .hero-summary{font-size:12px;margin-top:-20px}
+  .closing-statement h2{font-size:clamp(54px,16vw,78px)}
+}

@@ -1,6 +1,6 @@
 # Aurum Luxe Interiors
 
-Production portfolio for Aurum Luxe Interiors, a Mumbai-based interior design and turnkey execution studio.
+Production portfolio for Aurum Luxe Interiors, a Pan-India interior design and turnkey execution studio based in Mumbai.
 
 ## Files
 
