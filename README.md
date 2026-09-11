@@ -1,20 +1,15 @@
 # Aurum Luxe Interiors
 
-A static landing page for Aurum Luxe Interiors, ready to deploy on Vercel.
+Production portfolio for Aurum Luxe Interiors, a Mumbai-based interior design and turnkey execution studio.
 
 ## Files
 
-- `index.html` - page content and SEO metadata
-- `styles.css` - responsive visual design
-- `script.js` - header scroll state and footer year
-- `vercel.json` - clean URL settings for Vercel
+- `index.html` — semantic, image-led portfolio and SEO metadata
+- `styles.css` — responsive editorial design system
+- `script.js` — mobile navigation, restrained reveals, and footprint interaction
+- `assets/` — optimized local WebP portfolio visualisations
+- `vercel.json` — Vercel output, asset caching, and security headers
 
 ## Deploy on Vercel
 
-1. Upload or push this `aurum-luxe-interiors` folder to a GitHub repository.
-2. In Vercel, choose **Add New Project**.
-3. Import the repository.
-4. Keep the framework preset as **Other**.
-5. Use `npm run build` as the build command.
-6. Set the output directory to `public` if Vercel asks.
-7. Deploy.
+The site deploys from `main` through Vercel. Build with `npm run build`; the generated static site is written to `public/`.

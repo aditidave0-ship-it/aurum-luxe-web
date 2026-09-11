@@ -12,4 +12,8 @@ for (const file of files) {
   fs.copyFileSync(path.join(root, file), path.join(output, file));
 }
 
+fs.cpSync(path.join(root, "assets"), path.join(output, "assets"), {
+  recursive: true,
+});
+
 console.log("Static site ready in public/");
