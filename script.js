@@ -72,3 +72,17 @@ document.querySelector('.footprint-experience')?.addEventListener('pointerleave'
   if (event.pointerType !== 'mouse') return;
   activateFootprintCity('mumbai');
 });
+
+const instagramUrl = 'https://www.instagram.com/aurumluxeinteriorsofficial?stkn=MXJrZWQ2Zzh4ZXB0bA%3D%3D&utm_source=qr';
+const instagramQr = document.querySelector('#instagram-qr');
+
+if (instagramQr && typeof QRCode !== 'undefined') {
+  new QRCode(instagramQr, {
+    text: instagramUrl,
+    width: 148,
+    height: 148,
+    colorDark: '#171310',
+    colorLight: '#f3eee4',
+    correctLevel: QRCode.CorrectLevel.H,
+  });
+}
