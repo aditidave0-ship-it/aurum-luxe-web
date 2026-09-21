@@ -211,54 +211,87 @@
       <div class="footprint-intro reveal">
         <div>
           <p class="eyebrow">Our footprint</p>
-          <h2 id="footprint-title">Designed<br />across<br /><em>India.</em></h2>
+          <h2 id="footprint-title">Rooted in<br /><em>Mumbai.</em><br />Designing beyond.</h2>
         </div>
-        <p>One design philosophy. Different spaces,<br />cities and possibilities.</p>
+        <div class="footprint-copy">
+          <p>Mumbai is at the heart of our work—where we primarily design, develop and execute our projects.</p>
+          <p>Our experience also extends beyond the city, with project work undertaken in Rajasthan.</p>
+        </div>
       </div>
 
       <div class="footprint-experience reveal">
-        <div class="map-stage" aria-label="Interactive map showing verified Aurum Luxe locations">
+        <div class="map-stage" data-active-city="mumbai" aria-label="Interactive map showing Aurum Luxe work in Mumbai and Rajasthan">
           <div class="map-coordinate north">28° N</div>
           <div class="map-coordinate south">08° N</div>
           <svg class="india-outline" viewBox="0 0 430 520" role="img" aria-labelledby="india-map-title india-map-desc">
             <title id="india-map-title">Aurum Luxe project footprint in India</title>
-            <desc id="india-map-desc">A stylised map of India with one verified location marker at Mumbai.</desc>
+            <desc id="india-map-desc">A stylised map of India showing Mumbai as the primary project base and Rajasthan as additional project experience.</desc>
             <defs>
               <pattern id="map-grid" width="24" height="24" patternUnits="userSpaceOnUse">
                 <path d="M24 0H0V24" fill="none" stroke="currentColor" stroke-width=".35" opacity=".22" />
               </pattern>
+              <clipPath id="india-clip">
+                <path d="M174 21l38 21 33-8 18 31 47 14 21 36 38 12-15 31 39 34-31 26-3 52-45 13-17 37-28 2-8 50-28 83-23 44-19-65-17-35-40-23-12-42-33-23 11-36-30-32 25-33-5-39 42-17-6-39 31-26 40 11 19-39z" />
+              </clipPath>
             </defs>
             <path class="map-grid-fill" d="M174 21l38 21 33-8 18 31 47 14 21 36 38 12-15 31 39 34-31 26-3 52-45 13-17 37-28 2-8 50-28 83-23 44-19-65-17-35-40-23-12-42-33-23 11-36-30-32 25-33-5-39 42-17-6-39 31-26 40 11 19-39z" />
             <path class="map-land" d="M174 21l38 21 33-8 18 31 47 14 21 36 38 12-15 31 39 34-31 26-3 52-45 13-17 37-28 2-8 50-28 83-23 44-19-65-17-35-40-23-12-42-33-23 11-36-30-32 25-33-5-39 42-17-6-39 31-26 40 11 19-39z" />
-            <path class="map-connector" d="M112 285 C 73 278, 51 253, 18 245" pathLength="1" />
+            <g class="map-boundaries" clip-path="url(#india-clip)" aria-hidden="true">
+              <path d="M92 142C155 155 221 144 308 112M73 205C151 219 225 195 361 182M74 269C153 257 260 278 349 244M103 330C177 304 241 333 311 315M137 382C184 363 231 382 278 369M163 425C197 410 230 418 257 405M157 104C171 168 151 224 181 291M222 65C211 132 235 205 219 270M288 96C267 172 292 227 270 306" />
+            </g>
+            <ellipse class="state-glow state-glow-rajasthan" cx="132" cy="178" rx="52" ry="44" />
+            <ellipse class="state-glow state-glow-mumbai" cx="116" cy="285" rx="30" ry="42" />
+            <path class="map-connector connector-rajasthan" d="M132 178 C 205 154, 280 150, 416 134" pathLength="1" />
+            <path class="map-connector connector-mumbai" d="M116 285 C 205 300, 295 302, 418 326" pathLength="1" />
           </svg>
 
           <button class="city-pin is-active" type="button" data-city="mumbai" aria-label="View Mumbai project categories" aria-pressed="true">
             <span class="pin-pulse" aria-hidden="true"></span>
             <span class="pin-core" aria-hidden="true"></span>
-            <span class="pin-name">Mumbai</span>
+            <span class="pin-name"><strong>Mumbai</strong><small>Primary project base</small></span>
           </button>
 
-          <div class="map-origin" aria-hidden="true"><span>India</span><small>Verified project locations</small></div>
+          <button class="city-pin city-pin-rajasthan" type="button" data-city="rajasthan" aria-label="View Rajasthan project experience" aria-pressed="false">
+            <span class="pin-pulse" aria-hidden="true"></span>
+            <span class="pin-core" aria-hidden="true"></span>
+            <span class="pin-name"><strong>Rajasthan</strong><small>Project experience</small></span>
+          </button>
+
+          <div class="map-origin" aria-hidden="true"><span>India</span><small>Mumbai at heart · Designing beyond</small></div>
         </div>
 
-        <aside class="city-story is-visible" data-city-panel="mumbai" aria-live="polite">
-          <div class="city-photo">
-            <img src="assets/hero-residence.webp" alt="Warm contemporary Mumbai residence design visualisation" />
-            <span>Design visualisation</span>
-          </div>
-          <div class="city-details">
-            <p class="city-kicker">19.0760° N · 72.8777° E</p>
-            <h3>Mumbai</h3>
-            <p class="city-categories">Residential · Commercial · Banking · Salon<br />Hospitality · Custom Furniture</p>
-            <p class="city-note">Studio base and verified location. Project photography will replace this visualisation as approved portfolio records are supplied.</p>
-          </div>
+        <aside class="location-cards" aria-live="polite">
+          <article class="city-story city-story-primary is-visible" data-city-panel="mumbai">
+            <div class="city-photo">
+              <img src="assets/hero-residence.webp" alt="Warm contemporary Mumbai residence design visualisation" />
+              <span>Design visualisation</span>
+            </div>
+            <div class="city-details">
+              <p class="city-kicker">Primary project base</p>
+              <h3>Mumbai</h3>
+              <p class="city-statement">Our city. Our core.</p>
+              <p class="city-categories">Residential · Commercial · Banking · Salon · Hospitality · Kitchens · Custom Furniture · Turnkey Execution</p>
+            </div>
+          </article>
+
+          <article class="city-story city-story-secondary" data-city-panel="rajasthan">
+            <div class="city-photo">
+              <img src="assets/hospitality-lounge.webp" alt="Representative Aurum Luxe interior design visualisation" />
+              <span>Representative visualisation</span>
+            </div>
+            <div class="city-details">
+              <p class="city-kicker">Additional location</p>
+              <h3>Rajasthan</h3>
+              <p class="city-statement">Selected project experience.</p>
+              <p class="city-note">Approved project imagery and details will be added when the Rajasthan portfolio record is finalised.</p>
+            </div>
+          </article>
         </aside>
       </div>
 
       <div class="footprint-quote reveal">
         <span aria-hidden="true">“</span>
-        <blockquote>A growing portfolio across India.<br /><small>Only verified project locations appear on the map.</small></blockquote>
+        <blockquote>Mumbai at heart.<br />Design without boundaries.<small>Thoughtful spaces shaped by context, purpose and the people who experience them.</small></blockquote>
       </div>
 
       <div class="expertise-strip" aria-label="Aurum Luxe areas of expertise">

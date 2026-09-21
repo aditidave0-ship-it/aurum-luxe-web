@@ -125,3 +125,91 @@
   .hero-summary{font-size:12px;margin-top:-20px}
   .closing-statement h2{font-size:clamp(54px,16vw,78px)}
 }
+
+/* Footprint v2 — Mumbai primary, Rajasthan project experience */
+.footprint-intro{grid-template-columns:minmax(0,1.18fr) minmax(300px,.82fr);align-items:end}
+.footprint-intro>div{grid-template-columns:.28fr 1fr}
+.footprint h2{font-size:clamp(62px,7.2vw,116px);line-height:.84}
+.footprint-copy{max-width:570px;margin-bottom:5px}
+.footprint-intro>.footprint-copy p{margin:0;font:400 clamp(17px,1.35vw,22px)/1.55 var(--serif)}
+.footprint-intro>.footprint-copy p+p{margin-top:20px;color:#76685b;font-size:clamp(14px,1.05vw,18px)}
+.footprint-experience{grid-template-columns:minmax(0,1.25fr) minmax(370px,.75fr);min-height:830px;background:rgba(255,255,255,.11)}
+.map-stage{min-height:830px;background:radial-gradient(circle at 48% 43%,rgba(255,255,255,.62),transparent 48%),linear-gradient(135deg,rgba(255,255,255,.16),transparent 58%)}
+.india-outline{width:min(76%,620px);filter:drop-shadow(0 30px 26px rgba(50,35,24,.12))}
+.map-land{fill:rgba(198,183,164,.78);stroke:#a88762;stroke-width:1.35}
+.map-grid-fill{fill:url(#map-grid);color:#806a52}
+.map-boundaries{fill:none;stroke:rgba(255,255,255,.78);stroke-width:.8;vector-effect:non-scaling-stroke}
+.state-glow{fill:#b3864f;opacity:0;filter:drop-shadow(0 0 12px rgba(178,134,79,.62));transition:opacity .65s ease}
+.map-stage[data-active-city="mumbai"] .state-glow-mumbai,.map-stage[data-active-city="rajasthan"] .state-glow-rajasthan{opacity:.35}
+.map-connector{opacity:.16;stroke:#9b6c38;stroke-width:1.15;stroke-dashoffset:1;transition:stroke-dashoffset 1.1s cubic-bezier(.2,.7,.2,1),opacity .5s ease}
+.map-stage[data-active-city="mumbai"] .connector-mumbai,.map-stage[data-active-city="rajasthan"] .connector-rajasthan{stroke-dashoffset:0;opacity:.9}
+.city-pin[data-city="mumbai"]{left:31.7%;top:54.2%;width:48px;height:48px}
+.city-pin[data-city="rajasthan"]{left:35.6%;top:34.1%;width:36px;height:36px}
+.city-pin[data-city="mumbai"] .pin-core{width:15px;height:15px;background:#9b6c38;box-shadow:0 0 0 7px rgba(178,134,79,.16),0 6px 18px rgba(61,40,20,.3)}
+.city-pin[data-city="rajasthan"] .pin-core{width:10px;height:10px;background:#a57b4d}
+.city-pin[data-city="mumbai"] .pin-pulse{inset:0;border-color:#a77b48;opacity:.45;animation:mumbaiPulse 2.8s ease-out infinite}
+.city-pin[data-city="rajasthan"] .pin-pulse{inset:4px;border-color:#a77b48}
+.city-pin .pin-name{left:36px;top:5px;min-width:150px;padding:8px 10px;background:rgba(243,238,228,.9);box-shadow:0 8px 22px rgba(53,36,22,.08)}
+.city-pin[data-city="rajasthan"] .pin-name{left:27px;top:1px;min-width:140px}
+.pin-name strong,.pin-name small{display:block;text-align:left}
+.pin-name strong{font:600 11px/1.2 var(--serif);letter-spacing:.13em;text-transform:uppercase}
+.pin-name small{margin-top:4px;color:#7e6b59;font-size:7px;letter-spacing:.12em;text-transform:uppercase}
+.map-origin{min-width:210px}
+.location-cards{display:flex;flex-direction:column;justify-content:center;gap:22px;padding:34px;background:#211b17}
+.location-cards .city-story{display:block;min-height:0;background:#2a231d;border:1px solid rgba(255,255,255,.13);opacity:.46;transform:none;overflow:hidden;transition:opacity .55s ease,border-color .55s ease,transform .55s ease}
+.location-cards .city-story.is-visible{opacity:1;border-color:rgba(211,170,112,.62);transform:translateX(-10px)}
+.location-cards .city-story-primary .city-photo{height:280px;min-height:0}
+.location-cards .city-story-secondary .city-photo{height:165px;min-height:0}
+.location-cards .city-photo::after{background:linear-gradient(0deg,rgba(18,13,10,.55),transparent 55%)}
+.location-cards .city-details{padding:24px 26px 28px}
+.location-cards .city-kicker{margin-bottom:10px;color:#c0a080}
+.location-cards .city-details h3{font-size:clamp(42px,4vw,66px)}
+.location-cards .city-story-secondary .city-details h3{font-size:clamp(35px,3.1vw,50px)}
+.city-statement{margin:13px 0 0;color:#d8b987;font:400 14px/1.4 var(--serif);text-transform:uppercase;letter-spacing:.08em}
+.location-cards .city-categories{margin-top:15px;font-size:15px;line-height:1.55}
+.location-cards .city-note{margin-top:15px;padding-top:14px}
+.footprint-quote{justify-content:flex-start;padding-left:15vw}
+.footprint-quote blockquote{font-style:normal;text-transform:uppercase;letter-spacing:-.01em}
+.footprint-quote blockquote small{max-width:560px;text-transform:none;letter-spacing:0;font:400 16px/1.6 var(--serif)}
+
+@keyframes mumbaiPulse{0%{transform:scale(.55);opacity:.65}70%,100%{transform:scale(1.65);opacity:0}}
+
+@media(max-width:900px){
+  .footprint-intro{grid-template-columns:1fr}
+  .footprint-intro>div{grid-template-columns:1fr}
+  .footprint h2{font-size:clamp(58px,14vw,96px)}
+  .footprint-copy{max-width:620px}
+  .footprint-experience{display:flex;flex-direction:column}
+  .map-stage{min-height:650px}
+  .india-outline{width:min(78%,500px)}
+  .city-pin[data-city="mumbai"]{left:31.7%;top:54.2%}
+  .city-pin[data-city="rajasthan"]{left:35.6%;top:34.1%}
+  .location-cards{padding:24px}
+  .location-cards .city-story{opacity:.72}
+  .location-cards .city-story.is-visible{transform:none}
+  .location-cards .city-story-primary .city-photo{height:auto;aspect-ratio:16/10}
+  .location-cards .city-story-secondary .city-photo{height:auto;aspect-ratio:16/9}
+  .footprint-quote{padding-left:24px}
+}
+
+@media(max-width:520px){
+  .footprint h2{font-size:clamp(50px,14.5vw,72px);line-height:.88}
+  .footprint-intro>.footprint-copy p{font-size:17px}
+  .map-stage{min-height:540px}
+  .india-outline{width:82%}
+  .city-pin[data-city="mumbai"]{left:30.8%;top:54.3%;width:42px;height:42px}
+  .city-pin[data-city="rajasthan"]{left:35%;top:34%;width:32px;height:32px}
+  .city-pin .pin-name{left:29px;min-width:116px;padding:6px 8px}
+  .city-pin[data-city="rajasthan"] .pin-name{left:22px;min-width:112px}
+  .pin-name strong{font-size:9px}.pin-name small{font-size:6px}
+  .map-origin{min-width:170px}
+  .location-cards{padding:18px}
+  .location-cards .city-details{padding:22px 20px 25px}
+  .location-cards .city-details h3{font-size:52px}
+  .location-cards .city-story-secondary .city-details h3{font-size:42px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .city-pin[data-city="mumbai"] .pin-pulse{animation:none;opacity:.25}
+  .map-connector,.state-glow,.location-cards .city-story{transition:none}
+}

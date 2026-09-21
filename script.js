@@ -46,8 +46,11 @@ document.querySelectorAll('.reveal').forEach(element => observer.observe(element
 
 const footprintPins = document.querySelectorAll('.city-pin[data-city]');
 const cityPanels = document.querySelectorAll('[data-city-panel]');
+const footprintMap = document.querySelector('.map-stage');
 
 function activateFootprintCity(city) {
+  footprintMap?.setAttribute('data-active-city', city);
+
   footprintPins.forEach(pin => {
     const selected = pin.dataset.city === city;
     pin.classList.toggle('is-active', selected);
@@ -63,4 +66,9 @@ footprintPins.forEach(pin => {
   ['click', 'pointerenter', 'focus'].forEach(eventName => {
     pin.addEventListener(eventName, () => activateFootprintCity(pin.dataset.city));
   });
+});
+
+document.querySelector('.footprint-experience')?.addEventListener('pointerleave', event => {
+  if (event.pointerType !== 'mouse') return;
+  activateFootprintCity('mumbai');
 });
