@@ -214,3 +214,9 @@
   .city-pin[data-city="mumbai"] .pin-pulse{animation:none;opacity:.25}
   .map-connector,.state-glow,.location-cards .city-story{transition:none}
 }
+
+/* Final interaction polish */
+section[id]{scroll-margin-top:72px}
+.button,.text-link{transition:color .25s ease,background-color .25s ease,border-color .25s ease,transform .25s ease}
+.button:hover,.button:focus-visible{transform:translateY(-2px)}
+.text-link:hover,.text-link:focus-visible{color:var(--gold);border-color:var(--gold)}
