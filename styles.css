@@ -95,6 +95,13 @@
 .brand-mark{border-color:var(--gold);color:#d4ae73}
 .hero-summary{max-width:580px;margin:-18px 0 34px;color:rgba(255,255,255,.72);font-size:13px;line-height:1.65}
 .signature-line{margin-top:28px!important;color:#8a6848!important;font:400 19px/1.4 var(--serif)!important;letter-spacing:.02em}
+.intro-manifesto{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:22px 7vw;padding:70px 0 16px;border-top:1px solid var(--line)}
+.intro-manifesto p{max-width:620px;margin:0;color:#5e554e;font-size:14px;line-height:1.75}
+.intro-manifesto .signature-line{align-self:end;margin:0!important}
+.brand-promise{grid-column:1/-1;display:grid;grid-template-columns:.55fr 1.15fr 1fr;gap:4vw;align-items:start;padding:74px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.brand-promise h3{margin:0;font:400 clamp(42px,5vw,78px)/.96 var(--serif);letter-spacing:-.025em}
+.brand-promise>div p{margin:4px 0 28px;color:#5e554e;font-size:14px;line-height:1.75}
+.brand-promise strong{color:#8a6848;font:400 18px/1.4 var(--serif);letter-spacing:.02em}
 .undertake{background:var(--ivory)}
 .undertake-groups{border-top:1px solid var(--line)}
 .undertake-groups article{display:grid;grid-template-columns:minmax(150px,.55fr) 1fr;gap:28px;padding:24px 0;border-bottom:1px solid var(--line)}
@@ -108,6 +115,8 @@
 .closing-signature{margin:42px 0 0;color:#d4ae73;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
 
 @media(max-width:900px){
+  .intro-manifesto{grid-template-columns:1fr;padding-top:52px}
+  .brand-promise{grid-template-columns:1fr;gap:22px;padding:60px 0}
   .undertake-groups article{grid-template-columns:1fr;gap:7px}
   .closing-statement{padding:100px 24px}
 }
